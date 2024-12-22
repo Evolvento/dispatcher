@@ -1,0 +1,155 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Навигационная панель */
+.toolbar {
+    background-color: #2c3e50;
+    padding: 15px;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toolbar h2 {
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 1px solid #34495e;
+    padding-bottom: 10px;
+}
+
+.toolbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.toolbar a:hover {
+    color: #1abc9c;
+}
+
+/* Основной контент */
+.content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Форма выбора группы или преподавателя */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+form label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form select,
+form button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+form select {
+    min-width: 200px;
+}
+
+form button {
+    background-color: #3498db;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Расписание */
+.schedule-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.day-block {
+    flex: 1;
+    min-width: 250px;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.day-block h2 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.day-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.day-block ul li {
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 1px solid #dcdde1;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.day-block ul li strong {
+    color: #2980b9;
+}
+
+.day-block p {
+    color: #7f8c8d;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .toolbar {
+        font-size: 14px;
+    }
+
+    form select,
+    form button {
+        font-size: 12px;
+    }
+
+    .schedule-container {
+        flex-direction: column;
+    }
+
+    .day-block {
+        min-width: 100%;
+    }
+}
